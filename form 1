@@ -1,0 +1,75 @@
+import React, { useState } from 'react';
+import data from './data.json';
+
+export default function App() {
+
+    const[AppData,setAppData]=useState({
+        name: ' ',
+        email: ' ',
+    password: ' '
+    });
+
+    const handleInput = (e) =>{
+        
+    }
+    
+                                     
+   
+
+    // const handleChange = (e) =>{
+
+    //     setName(e.target.value);
+        
+        
+    // }
+    //  const handleChange1 = (e) =>{
+
+        
+    //     setEmail(e.target.value);
+    //      console.log(email);
+        
+    // }
+
+
+    // const handleChange2 = (e) =>
+    //     {
+    //         setPassword(e.target.value);
+    //     }
+
+     const handleSubmit = (e )=>{
+         e.preventDefault()
+   }
+
+    
+    
+    
+    
+    return (
+   <div>
+      <label>
+        Name:
+        <input type='text' value={AppData.name} name="name " onChange={handleInput} />
+          {AppData.name}
+      </label>
+<br/>
+Email :
+       <label>
+           <input type='text' value={AppData.email} name="email " onChange={handleInput}/>
+           {AppData.email}
+       </label>
+       <br/>
+
+       Password:
+
+        <label>
+           <input type='password' value={AppData.password} name="password"  onChange={handleInput}/>
+           {AppData.password}
+       </label>
+<br/>
+       <button class="button" onSubmit={handleSubmit}>submit</button>
+    </div>
+  );
+  };
+
+ 
+
