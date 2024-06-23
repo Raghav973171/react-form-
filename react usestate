@@ -1,0 +1,31 @@
+import React, { useEffect, useState } from 'react';
+import data from './data.json'; // Assuming data.json exists
+
+const MyComponent = () => {
+  const [clicked, setClicked] = useState(''); // Initial state is an empty string
+
+ 
+  const handleClick = (text) => {
+    setClicked(text); // Update state with the button text
+  };
+
+  return (
+    <div>
+      <button onClick={() => handleClick('subscribe')}>Subscribe</button>
+      <br />
+      <hr />
+
+      <button onClick={() => handleClick('to')}>To</button>
+      <br />
+      <hr />
+
+      <button onClick={() => handleClick('Raghav')}>Raghav</button>
+      <br />
+      <hr />
+
+      <h1>{clicked}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
